@@ -8,7 +8,9 @@
   "scripts": {
     "build-image": "docker build --tag bulletinboard:1.0 . ",
     "start": "docker run --publish 8000:8080 --detach --name bb bulletinboard:1.0",
-    "stop": "docker rm --force bb"
+    "stop": "docker rm --force bb",
+    "tag": "docker tag bulletinboard:1.0 cleonty/bulletinboard:1.0",
+    "push": "docker push cleonty/bulletinboard:1.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
