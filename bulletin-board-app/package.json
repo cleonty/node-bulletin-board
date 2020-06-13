@@ -5,6 +5,11 @@
   "main": "server.js",
   "author": "Ryan Chenkie, Jason Lam",
   "license": "MIT",
+  "scripts": {
+    "build-image": "docker build --tag bulletinboard:1.0 . ",
+    "start": "docker run --publish 8000:8080 --detach --name bb bulletinboard:1.0",
+    "stop": "docker rm --force bb"
+  },
   "dependencies": {
     "bootstrap": "^3.3.6",
     "ejs": "^2.3.4",
